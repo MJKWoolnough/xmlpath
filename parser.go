@@ -171,7 +171,7 @@ func Parse(r io.Reader) (*Node, error) {
 
 // ParseDecoder parses the xml document being decoded by d and returns
 // its root node.
-func ParseDecoder(d *xml.Decoder) (*Node, error) {
+func ParseDecoder(d xml.TokenReader) (*Node, error) {
 	var nodes []Node
 	var text []byte
 
